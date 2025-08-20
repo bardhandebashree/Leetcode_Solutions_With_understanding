@@ -1,0 +1,152 @@
+🔑 Scalability — Topics & What to Study
+1. Horizontal vs Vertical Scaling
+
+Vertical scaling: Add more power (CPU/RAM) to a single machine.
+
+Horizontal scaling: Add more machines (distributed system).
+
+Study:
+
+When to use vertical vs horizontal scaling
+
+Cost trade-offs
+
+Limits of vertical scaling
+
+2. Load Balancing
+
+Distribute traffic across multiple servers.
+
+Algorithms to study:
+
+Round Robin
+
+Weighted Round Robin
+
+Least Connections
+
+Consistent Hashing (used in CDNs, distributed DBs)
+
+Study Tools: Nginx, HAProxy, AWS Elastic Load Balancer.
+
+3. Caching
+
+Reduce repeated expensive computations or DB queries.
+
+Types:
+
+Client-side cache (browser cache, service workers)
+
+CDN cache (Cloudflare, Akamai)
+
+Reverse proxy cache (Varnish, Nginx)
+
+Distributed cache (Redis, Memcached)
+
+Eviction policies: LRU, LFU, FIFO.
+
+Study: How cache improves latency, cache consistency, cache invalidation strategies.
+
+4. Database Scaling
+
+Replication:
+
+Master-Slave / Leader-Follower
+
+Multi-Master
+
+Strong vs Eventual consistency
+
+Sharding/Partitioning:
+
+Horizontal partitioning (split by user_id, region, etc.)
+
+Consistent hashing
+
+Indexes:
+
+B-tree, Hash Index
+
+Study: CAP theorem, PACELC theorem, NoSQL trade-offs.
+
+5. Asynchronous Processing
+
+Move heavy tasks out of the request cycle.
+
+Message queues: Kafka, RabbitMQ, AWS SQS.
+
+Task queues: Celery, Sidekiq.
+
+Study: Producer-Consumer model, Pub/Sub, Event-driven architecture.
+
+6. CDN (Content Delivery Network)
+
+Distribute static content closer to users.
+
+Study:
+
+How CDNs reduce latency & bandwidth costs
+
+Edge caching, geo-replication
+
+Tools: Cloudflare, Akamai, AWS CloudFront.
+
+7. Microservices & Service Discovery
+
+Break large systems into small, independently scalable services.
+
+Service discovery: Eureka, Consul, Zookeeper.
+
+Study: Benefits vs complexity of microservices.
+
+8. Data Storage & Scalability
+
+Blob storage: S3, GCS, Azure Blob (for images, videos).
+
+Distributed file systems: HDFS, Ceph.
+
+Study: Object storage vs block storage vs file systems.
+
+9. Monitoring & Auto-scaling
+
+Monitoring tools: Prometheus, Grafana, Datadog, ELK stack.
+
+Auto-scaling: Kubernetes HPA, AWS Auto Scaling Groups.
+
+Study: Scaling triggers (CPU, memory, request count).
+
+10. Scalability Trade-offs
+
+CAP theorem: Choose 2 of Consistency, Availability, Partition tolerance.
+
+Latency vs Throughput: Lowering latency may reduce throughput.
+
+Read-heavy vs Write-heavy workloads: Different optimizations.
+
+Study: When to denormalize, use caching, or shard databases.
+
+11. Patterns for Scalability
+
+CQRS (Command Query Responsibility Segregation) → separate reads & writes.
+
+Event sourcing → store state as a sequence of events.
+
+Saga pattern → handle distributed transactions.
+
+Bulkhead & Circuit Breaker patterns → fault isolation.
+
+Study: Real-world use in Netflix, Uber, Amazon.
+
+12. Case Studies (Must Practice)
+
+To really learn, design scalable systems:
+
+URL Shortener → TinyURL (handles billions of requests).
+
+Messaging app → WhatsApp / Messenger (real-time + scale).
+
+Social media feed → Twitter / Instagram feed generation.
+
+E-commerce system → Amazon-like order placement, checkout.
+
+Video streaming → Netflix (CDN + chunked delivery).
